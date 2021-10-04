@@ -1,0 +1,33 @@
+#Celing in an array (Snallest or geater element corresponding to the current element in array)
+
+public class celing {
+	
+	static void ceiling(int arr[]) {
+		
+		System.out.print("-1" + " ");
+		TreeSet<Integer> s=new TreeSet<>();
+		for(int i=0;i<arr.length;i++) {
+			
+			if(s.ceiling(arr[i])!=null) {
+				System.out.print(s.ceiling(arr[i])+ " ");
+				
+			}
+			else {
+				System.out.print("-1" +" ");
+				
+			}
+			s.add(arr[i]);
+			
+			
+		}
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		
+		int arr[]= {2,8,30,15,25,14};
+		ceiling(arr);
+
+	}
